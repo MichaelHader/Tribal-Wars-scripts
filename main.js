@@ -10,7 +10,7 @@
 // ==/UserScript==
 $('#menu_row') .append("<td class='menu-item' id='farma'><a href='#'><span> <img alt='Farmienie' src='http://cdn.plemiona.pl/8.20/20029/graphic/command/attack.png'>Farmienie</span></a></td>");
 
-if (!$.jStorage.get('init') || JSON.parse($.jStorage.get('cords')) .length == $.jStorage.get('iterator')) {
+if (!$.jStorage.get('init') || JSON.parse($.jStorage.get('cords')) .length >= $.jStorage.get('iterator')) {
     // initialize cords
 	var cord = [
 		'123|123',
