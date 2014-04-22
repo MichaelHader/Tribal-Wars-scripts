@@ -1,19 +1,21 @@
 // ==UserScript==
-// @name        Tribal Wars auto attacker
-// @namespace   
-// @description Auto attacker
-// @include     http://pl*.plemiona.pl/game.php?village=*&screen=place
-// @version     1
+// @name        TribalWarsFarmingScript 
+// @namespace   https://github.com/majk-p/Tribal-Wars-scripts
+// @description add shortcuts 
+// @include     http://*.plemiona.*/game.php?village=*&screen=place
 // @require     http://github.com/andris9/jStorage/raw/master/jstorage.js
+// @version     1.1
 // @grant       none
+// @author      http://michalp.net
 // ==/UserScript==
-$('#quickbar_inner') .find('tr:eq(1) ul') .append("<li id='farma'><a href='#'><span> <img alt='Farmienie' src='http://cdn.plemiona.pl/8.20/20029/graphic/command/attack.png'>Farmienie</span></a></li>");
+$('#menu_row') .append("<td class='menu-item' id='farma'><a href='#'><span> <img alt='Farmienie' src='http://cdn.plemiona.pl/8.20/20029/graphic/command/attack.png'>Farmienie</span></a></td>");
 
 if (!$.jStorage.get('init') || JSON.parse($.jStorage.get('cords')) .length == $.jStorage.get('iterator')) {
     // initialize cords
+    alert('kuniec');
     var cord = [
-        '123|456',
-        '654|987'
+    '123|123',
+    '456|456'
     ];
     $.jStorage.set('cords', JSON.stringify(cord));
     // set defaults
@@ -31,4 +33,3 @@ $('#farma') .click(function (e) {
     );
     $.jStorage.set('iterator', parseInt($.jStorage.get('iterator')) + 1);
 });
-
