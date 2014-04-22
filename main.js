@@ -12,10 +12,9 @@ $('#menu_row') .append("<td class='menu-item' id='farma'><a href='#'><span> <img
 
 if (!$.jStorage.get('init') || JSON.parse($.jStorage.get('cords')) .length == $.jStorage.get('iterator')) {
     // initialize cords
-    alert('kuniec');
-    var cord = [
-    '123|123',
-    '456|456'
+	var cord = [
+		'123|123',
+		'456|456'
     ];
     $.jStorage.set('cords', JSON.stringify(cord));
     // set defaults
