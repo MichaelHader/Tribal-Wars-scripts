@@ -3,7 +3,7 @@
 // @namespace   http://example.net
 // @include     *.plemiona.pl/game.php?*
 // @require     http://code.jquery.com/jquery-1.9.1.min.js
-// @resource    qbar https://gist.githubusercontent.com/majk-p/06af3ccf5246e6b8e10b/raw/3ddcbcabb3b9235d8d1c9af1d775772e43eaabdb/quickbar
+// @resource    qbar https://raw.githubusercontent.com/majk-p/Tribal-Wars-scripts/master/static/quickbar.html
 // @version     1
 // @grant       GM_getResourceText
 // ==/UserScript==
