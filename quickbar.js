@@ -4,7 +4,7 @@
 // @include     *.plemiona.pl/game.php?*
 // @require     http://code.jquery.com/jquery-1.9.1.min.js
 // @require     http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js
-// @resource    jquitheme http://code.jquery.com/ui/1.8.24/themes/black-tie/jquery-ui.css
+// @resource    style https://raw.githubusercontent.com/majk-p/Tribal-Wars-scripts/master/static/style.css
 // @resource    qbar https://raw.githubusercontent.com/majk-p/Tribal-Wars-scripts/master/static/quickbar.html
 // @resource    settings https://raw.githubusercontent.com/majk-p/Tribal-Wars-scripts/master/static/settings.html
 // @version     1
@@ -23,7 +23,7 @@ function gup(name) {
 }
 $(function () {
     console.log("starting");
-    GM_addStyle(GM_getResourceText('jquitheme'));
+    GM_addStyle(GM_getResourceText('style'));
     $('.maincell') .prepend(GM_getResourceText('qbar') .split('VILID') .join(gup('village')));
     $("body").append(GM_getResourceText('settings'));
     
