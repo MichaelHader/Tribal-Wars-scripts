@@ -1,0 +1,21 @@
+#settings{
+	text-align:left;
+	background:#F2E4C1;
+	margin-left:auto;margin-right:auto;
+	display:none;
+	width:700px;
+}
+#settings #tabs{
+	clear:both;
+}
+#tabs #tablist{
+	display: inline;
+	list-style-type: none;
+}
+#tablist ul{
+	padding: 3px;
+}
+#tablist ul > li{
+	float: left; 
+	padding: 7px;
+}
