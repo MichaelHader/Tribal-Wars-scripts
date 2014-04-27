@@ -10,12 +10,12 @@
 }
 #tabs #tablist{
 	display: inline;
-	list-style-type: none;
 }
 #tablist ul{
 	padding: 3px;
 }
 #tablist ul > li{
-	float: left; 
+	float: left;
+	list-style-type: none;
 	padding: 7px;
 }
