@@ -1,15 +1,92 @@
 <div class="confirmation-box" id="settings">
-List of TribalWar scripts settings:
+Ustawienia skryptu
   <div id="tabs">
     <div id="tablist">
       <ul>
-        <li><a href="#tabs-1">Nunc tincidunt</a></li>
+        <li><a href="#tabs-1">Ustawienia farmera</a></li>
         <li><a href="#tabs-2">Proin dolor</a></li>
         <li><a href="#tabs-3">Aenean lacinia</a></li>
       </ul>
     </div></br></br>
     <div id="tabs-1" class="tab_content">
-      <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+      <div id="tabs-1" class="tab_content" style="display: block;">
+      Kolejne pola uzupełnij stałymi wartościami, które używane będą przez skrypt <b>farmer</b>.
+      <table>
+          <tr>
+              <td valign="top">
+                  <table class="vis" width="100%">
+                      <tr>
+                          <th>Piechota</th>
+                      </tr>
+                      <tr>
+                          <td class="nowrap">
+                              <a href="#" class="unit_link">
+                                  <img src="http://cdn.plemiona.pl/8.22/20391/graphic/unit/unit_spear.png" title="Pikinier" alt="" class="" />
+                              </a>
+                              <input id="unit_input_spear" name="spear" type="text" style="width: 40px" tabindex="1" value="" class="unitsInput" />
+                          </td>
+                      </tr>
+                      <tr>
+                          <td class="nowrap">
+                              <a href="#" class="unit_link" onclick="return UnitPopup.open(event, 'sword')">
+                                  <img src="http://cdn.plemiona.pl/8.22/20391/graphic/unit/unit_sword.png" title="Miecznik" alt="" class="" />
+                              </a>
+                              <input id="unit_input_sword" name="sword" type="text" style="width: 40px" tabindex="2" value="" class="unitsInput" />
+                          </td>
+                      </tr>
+                      <tr>
+                          <td class="nowrap">
+                              <a href="#" class="unit_link" onclick="return UnitPopup.open(event, 'axe')">
+                                  <img src="http://cdn.plemiona.pl/8.22/20391/graphic/unit/unit_axe.png" title="Topornik" alt="" class="" />
+                              </a>
+                              <input id="unit_input_axe" name="axe" type="text" style="width: 40px" tabindex="3" value="" class="unitsInput" />
+                          </td>
+                      </tr>
+                  </table>
+              </td>
+              <td valign="top">
+                  <table class="vis" width="100%">
+                      <tr>
+                          <th>Kawaleria</th>
+                      </tr>
+                      <tr>
+                          <td class="nowrap">
+                              <a href="#" class="unit_link" onclick="return UnitPopup.open(event, 'spy')">
+                                  <img src="http://cdn.plemiona.pl/8.22/20391/graphic/unit/unit_spy.png" title="Zwiadowca" alt="" class="" />
+                              </a>
+                              <input id="unit_input_spy" name="spy" type="text" style="width: 40px" tabindex="4" value="" class="unitsInput" />
+                          </td>
+                      </tr>
+                      <tr>
+                          <td class="nowrap">
+                              <a href="#" class="unit_link" onclick="return UnitPopup.open(event, 'light')">
+                                  <img src="http://cdn.plemiona.pl/8.22/20391/graphic/unit/unit_light.png" title="Lekki kawalerzysta" alt="" class="" />
+                              </a>
+                              <input id="unit_input_light" name="light" type="text" style="width: 40px" tabindex="5" value="" class="unitsInput" />
+                          </td>
+                      </tr>
+                      <tr>
+                          <td class="nowrap">
+                              <a href="#" class="unit_link" onclick="return UnitPopup.open(event, 'heavy')">
+                                  <img src="http://cdn.plemiona.pl/8.22/20391/graphic/unit/unit_heavy.png" title="Ciężki kawalerzysta" alt="" class="" />
+                              </a>
+                              <input id="unit_input_heavy" name="heavy" type="text" style="width: 40px" tabindex="6" value="" class="unitsInput" />
+                          </td>
+                      </tr>
+                  </table>
+              </td>
+              <td valign="top">
+      			<textarea rows="5" cols="30">Zastap ten tekst lista wspolrzednych w postaci: 123|456,123|456,123|456     BEZ SPACJI po ","!</textarea>
+              </td>
+          </tr>
+      </table>
+      
+      
+      <div class="float_left" style="margin-left: 30px">
+          <input id="target_attack" tabindex="15" class="attack btn btn-attack btn-target-action" name="attack" type="submit" value="Zapisz ustawienia" />
+      </div>
+    </div>
+
     </div>
     <div id="tabs-2" class="tab_content">
       <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
