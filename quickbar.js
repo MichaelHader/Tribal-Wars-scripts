@@ -21,6 +21,11 @@ function gup(name) {
      else
     return results[1];
 }
+
+function ucFirst(string) {
+    return string.substring(0, 1).toUpperCase() + string.substring(1).toLowerCase();
+}
+
 $(function () {
     console.log("starting");
     GM_addStyle(GM_getResourceText('style'));
@@ -48,6 +53,26 @@ $(function () {
  
         return false;
     });
+    
+    // wybor zakladek
+    
+    //akcje zakladek
+    
+    $("#tabs-1 #target_attack").click(function(e){
+        e.preventDefault();
+        $("#tabs-1 .unitsInput").each(function(){
+            var arr = $(this).attr("id").split("_");
+            $.jStorage.set("farm"+ucFirst(arr[arr.length-1]), $(this).val());
+            console.log("farm"+ucFirst(arr[arr.length-1])+"  "+$(this).val());
+        });
+        alert("Zapisano");
+    });
 
+    // zawartosci dla zakladek
+    $("#tabs-1 .unitsInput").each(function(){
+        var arr = $(this).attr("id").split("_");
+        $(this).val($.jStorage.get("farm"+ucFirst(arr[arr.length-1])));
+    });
+    
     console.log("done");
 });
