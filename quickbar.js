@@ -4,6 +4,7 @@
 // @include     *.plemiona.pl/game.php?*
 // @require     http://code.jquery.com/jquery-1.9.1.min.js
 // @require     http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js
+// @require     http://github.com/andris9/jStorage/raw/master/jstorage.js
 // @resource    style https://raw.githubusercontent.com/majk-p/Tribal-Wars-scripts/master/static/style.css
 // @resource    qbar https://raw.githubusercontent.com/majk-p/Tribal-Wars-scripts/master/static/quickbar.html
 // @resource    settings https://raw.githubusercontent.com/majk-p/Tribal-Wars-scripts/master/static/settings.html
