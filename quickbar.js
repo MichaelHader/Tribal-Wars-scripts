@@ -12,6 +12,9 @@
 // @grant       GM_getResourceText
 // @grant       GM_addStyle
 // ==/UserScript==
+
+
+
 function gup(name) {
     name = name.replace(/[\[]/, '\[') .replace(/[\]]/, '\]');
     var regexS = '[\?&]' + name + '=([^&#]*)';
@@ -55,25 +58,40 @@ $(function () {
         return false;
     });
     
-    // wybor zakladek
+    // tab selection
     
-    //akcje zakladek
+    // tabs actions
     
-    $("#tabs-1 #target_attack").click(function(e){
+    $("#tabs-1 #target_attack").click(function(e){   // saving settings for farming script
         e.preventDefault();
         $("#tabs-1 .unitsInput").each(function(){
             var arr = $(this).attr("id").split("_");
             $.jStorage.set("farm"+ucFirst(arr[arr.length-1]), $(this).val());
             console.log("farm"+ucFirst(arr[arr.length-1])+"  "+$(this).val());
         });
+        var pattern = /\d{3}\|\d{3}/; 
+        var cords = new Array();
+        var data= $("#tabs-1 textarea").val().split(",");
+        for(var i=0; i<data.length; i++){
+            data[i]=$.trim(data[i]);
+            console.log(data[i]+" "+pattern.test(data[i]));
+            if(pattern.test(data[i])) cords.push(data[i]);
+        }
+        $.jStorage.set('cords', JSON.stringify(cords));
         alert("Zapisano");
     });
 
-    // zawartosci dla zakladek
+    // tabs content
+    //    tabs-1 content
     $("#tabs-1 .unitsInput").each(function(){
         var arr = $(this).attr("id").split("_");
         $(this).val($.jStorage.get("farm"+ucFirst(arr[arr.length-1])));
     });
-    
+    var textareaData = "";
+    for(var i=0; i< JSON.parse($.jStorage.get('cords')).length; i++){
+        textareaData = textareaData + JSON.parse($.jStorage.get('cords'))[i] + ", ";
+    }
+    $("#tabs-1 textarea").val(textareaData);
+    //   eof tabs-1 
     console.log("done");
 });
