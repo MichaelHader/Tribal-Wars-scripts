@@ -13,6 +13,8 @@ function ucFirst(string) {
     return string.substring(0, 1).toUpperCase() + string.substring(1).toLowerCase();
 }
 
+var cord = new Array();
+
 function waitForQuickbar(){
     if(! $('#quickbar_inner').length){
         window.setTimeout(waitForQuickbar, 50);
@@ -25,16 +27,7 @@ function main(){
     //$.jStorage.set('init',0);
     $('#quickbar_inner') .find('tr:eq(1) ul') .append("<li id='farma'><a href='#'><span> <img alt='Farmienie' src='http://cdn.plemiona.pl/8.20/20029/graphic/command/attack.png'>Farmienie</span></a></li>");    
     if (!$.jStorage.get('init') || JSON.parse($.jStorage.get('cords')) .length == $.jStorage.get('iterator')) {
-        // initialize cords
         console.log("init");
-        var cord = [
-            '281|497',
-            '283|497',
-            '289|500',
-            '289|502',
-            '292|501',
-            '292|499'
-        ];
         $.jStorage.set('cords', JSON.stringify(cord));
         // set defaults
         $.jStorage.set('farmingActive', 0);
