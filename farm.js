@@ -13,7 +13,18 @@ function ucFirst(string) {
     return string.substring(0, 1).toUpperCase() + string.substring(1).toLowerCase();
 }
 
-var cord = new Array();
+function gup(name) {
+    name = name.replace(/[\[]/, '\[') .replace(/[\]]/, '\]');
+    var regexS = '[\?&]' + name + '=([^&#]*)';
+    var regex = new RegExp(regexS);
+    var results = regex.exec(window.location.href);
+    if (results == null)
+    return '';
+     else
+    return results[1];
+}
+
+var cord = JSON.parse($.jStorage.get("cords"));
 
 function waitForQuickbar(){
     if(! $('#quickbar_inner').length){
@@ -49,9 +60,8 @@ function main(){
         });
         
         $('.target-input-field').val(JSON.parse($.jStorage.get('cords')) [$.jStorage.get('iterator')]);
-        $.jStorage.set('iterator', parseInt($.jStorage.get('iterator')) + 1);
-        //$.jStorage.set('cords', JSON.stringify(coord));
-        //console.log(JSON.parse($.jStorage.get('cords')));
+        $("#content_value h3").append(" ["+$.jStorage.get('iterator')+"/"+JSON.parse($.jStorage.get('cords')).length+"]");
+        if(gup("try") != "confirm") $.jStorage.set('iterator', parseInt($.jStorage.get('iterator')) + 1);
     }
 }
 
