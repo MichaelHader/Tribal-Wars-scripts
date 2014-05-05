@@ -11,8 +11,7 @@ You only need to install Firefox' s [Greasemonkey](https://addons.mozilla.org/pl
 Current functionality:
 - Quickbar with quick access links
 - Farming with quickbar status indicator 
-- Settings window accessible from quickbar (currently setting constant army count only)
-
+- Settings window accessible from quickbar (full configuration for farming)
+- 
 To do:
-- Extend settings window functionality (functionall cord list)
 - Arrows to fast access next/previous village
