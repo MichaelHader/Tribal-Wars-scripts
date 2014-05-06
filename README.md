@@ -12,6 +12,6 @@ Current functionality:
 - Quickbar with quick access links
 - Farming with quickbar status indicator 
 - Settings window accessible from quickbar (full configuration for farming)
-- 
+
 To do:
 - Arrows to fast access next/previous village
