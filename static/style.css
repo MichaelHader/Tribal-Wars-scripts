@@ -23,3 +23,7 @@
 .active{
 	text-decoration: underline overline;
 }
+
+#quickbar_inner .quickbar {
+	padding-top: 10px;
+}
