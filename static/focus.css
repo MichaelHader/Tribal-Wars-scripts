@@ -1,3 +1,3 @@
-#target_attack:focus {
+#target_attack:focus, #troop_confirm_go:focus {
     border: 3px solid red;
 }
